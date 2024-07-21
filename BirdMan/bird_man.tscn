@@ -1,0 +1,190 @@
+[gd_scene load_steps=30 format=3 uid="uid://iijkwmyem5pv"]
+
+[ext_resource type="Texture2D" uid="uid://b5jl8sn184j3j" path="res://EnemysAssets/EnemyWithSpear/attack01.png" id="1_2nsg2"]
+[ext_resource type="Script" path="res://BirdMan/bird_man.gd" id="1_alop4"]
+[ext_resource type="Texture2D" uid="uid://c4e15dn06ko7t" path="res://EnemysAssets/EnemyWithSpear/attack02.png" id="2_m0fyp"]
+[ext_resource type="Texture2D" uid="uid://ck0i00oa3w5ut" path="res://EnemysAssets/EnemyWithSpear/attack03.png" id="3_dwqhi"]
+[ext_resource type="Texture2D" uid="uid://bki7h1ey2mbqh" path="res://EnemysAssets/EnemyWithSpear/attack04.png" id="4_ptd8e"]
+[ext_resource type="Texture2D" uid="uid://b1xeksuvi2kpy" path="res://EnemysAssets/EnemyWithSpear/attack05.png" id="5_txqra"]
+[ext_resource type="Texture2D" uid="uid://bc6mow2nv4d8u" path="res://EnemysAssets/EnemyWithSpear/attack06.png" id="6_81jua"]
+[ext_resource type="Texture2D" uid="uid://b88knej1el55a" path="res://EnemysAssets/EnemyWithSpear/attack07.png" id="7_55ull"]
+[ext_resource type="Texture2D" uid="uid://bch038s380626" path="res://EnemysAssets/EnemyWithSpear/hit03.png" id="8_2j1iq"]
+[ext_resource type="Texture2D" uid="uid://nerd62g0i4e1" path="res://EnemysAssets/EnemyWithSpear/hit02.png" id="9_n7mon"]
+[ext_resource type="Texture2D" uid="uid://ph54apr3ppgk" path="res://EnemysAssets/EnemyWithSpear/hit01.png" id="10_gr2un"]
+[ext_resource type="Texture2D" uid="uid://cmcp1xoqnqo0g" path="res://EnemysAssets/EnemyWithSpear/idle01.png" id="11_k61pp"]
+[ext_resource type="Texture2D" uid="uid://d1djw2lsm0h25" path="res://EnemysAssets/EnemyWithSpear/idle02.png" id="12_jiyfi"]
+[ext_resource type="Texture2D" uid="uid://ccbta5iafi555" path="res://EnemysAssets/EnemyWithSpear/idle03.png" id="13_17g6i"]
+[ext_resource type="Texture2D" uid="uid://cr1jk74tc66qp" path="res://EnemysAssets/EnemyWithSpear/idle04.png" id="14_p0kvj"]
+[ext_resource type="Texture2D" uid="uid://iwbccwkp64yw" path="res://EnemysAssets/EnemyWithSpear/idle05.png" id="15_wy2ud"]
+[ext_resource type="Texture2D" uid="uid://coqibamsxn5pk" path="res://EnemysAssets/EnemyWithSpear/idle06.png" id="16_eggqq"]
+[ext_resource type="Texture2D" uid="uid://5w3ecobdhr4x" path="res://EnemysAssets/EnemyWithSpear/idle07.png" id="17_hejm3"]
+[ext_resource type="Texture2D" uid="uid://c55dbthsrqofa" path="res://EnemysAssets/EnemyWithSpear/walk01.png" id="18_fj6cw"]
+[ext_resource type="Texture2D" uid="uid://062rwuc3oxf0" path="res://EnemysAssets/EnemyWithSpear/walk02.png" id="19_3fuld"]
+[ext_resource type="Texture2D" uid="uid://jxok58nss7rl" path="res://EnemysAssets/EnemyWithSpear/walk03.png" id="20_4ddjx"]
+[ext_resource type="Texture2D" uid="uid://bf3y23nc23a21" path="res://EnemysAssets/EnemyWithSpear/walk04.png" id="21_t0028"]
+[ext_resource type="Texture2D" uid="uid://c7a7gjyhd1qce" path="res://EnemysAssets/EnemyWithSpear/walk05.png" id="22_722qc"]
+[ext_resource type="Texture2D" uid="uid://brqcgjxg0mlj4" path="res://EnemysAssets/EnemyWithSpear/walk06.png" id="23_1emox"]
+[ext_resource type="Texture2D" uid="uid://cbs8bpjhaxke2" path="res://EnemysAssets/HealthBar/SleekBars Green.png" id="25_hwir0"]
+[ext_resource type="AudioStream" uid="uid://cn78g4jry3hes" path="res://Sounds/Youre-the-last-one-complete-the-Mission-G.wav" id="26_ku264"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ye6u6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2nsg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m0fyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dwqhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ptd8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_txqra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_81jua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_55ull")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_2j1iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n7mon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gr2un")
+}],
+"loop": false,
+"name": &"death",
+"speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_k61pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jiyfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_17g6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_p0kvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wy2ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_eggqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hejm3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_fj6cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3fuld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4ddjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t0028")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_722qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_1emox")
+}],
+"loop": true,
+"name": &"run",
+"speed": 11.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eqfii"]
+radius = 12.0
+height = 76.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rs4yw"]
+size = Vector2(64.25, 63)
+
+[node name="BirdMan" type="CharacterBody2D" groups=["enemy"]]
+position = Vector2(180, 223)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_alop4")
+
+[node name="Shadow" type="ColorRect" parent="."]
+offset_left = -36.0
+offset_top = 32.0
+offset_right = 33.0
+offset_bottom = 46.0
+color = Color(0.337255, 0.337255, 0.337255, 0.592157)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(31, -25)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ye6u6")
+animation = &"death"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.599998, 0.400002)
+shape = SubResource("CapsuleShape2D_eqfii")
+
+[node name="AreaAttack" type="Area2D" parent="."]
+position = Vector2(7.62939e-06, 7.62939e-06)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAttack"]
+position = Vector2(45.125, 3)
+shape = SubResource("RectangleShape2D_rs4yw")
+disabled = true
+
+[node name="RayCastAttack1" type="RayCast2D" parent="AreaAttack"]
+position = Vector2(0, -26)
+target_position = Vector2(52, 0)
+
+[node name="RayCastAttack2" type="RayCast2D" parent="AreaAttack"]
+position = Vector2(0, 3)
+target_position = Vector2(52, 0)
+
+[node name="RayCastAttack3" type="RayCast2D" parent="AreaAttack"]
+position = Vector2(0, 32)
+target_position = Vector2(52, 0)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+offset_left = -33.0
+offset_top = -59.0
+offset_right = 85.0
+offset_bottom = -37.0
+scale = Vector2(0.55, 0.55)
+value = 100.0
+texture_progress = ExtResource("25_hwir0")
+
+[node name="AudioLastOne" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_ku264")
+volume_db = -13.965
+pitch_scale = 1.1
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="AreaAttack" to="." method="_on_area_attack_body_entered"]
+[connection signal="finished" from="AudioLastOne" to="." method="_on_audio_last_one_finished"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://di3a1mhgjpiv5"]
+
+[ext_resource type="Script" path="res://Menu De Pausa/menu_pause.gd" id="1_ik2q5"]
+[ext_resource type="Texture2D" uid="uid://b5d76lhfgcwdj" path="res://Menu De Pausa/PauseButton.png" id="2_ebbu5"]
+
+[node name="MenuPause" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ik2q5")
+
+[node name="ColorFondoPausa" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.27451, 0.27451, 0.27451, 0.584314)
+
+[node name="ButtonContinuar" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 546.0
+offset_top = 286.0
+offset_right = 732.0
+offset_bottom = 336.0
+theme_override_font_sizes/font_size = 30
+text = "CONTINUAR"
+
+[node name="ButtonSalir" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 591.0
+offset_top = 365.0
+offset_right = 680.0
+offset_bottom = 415.0
+theme_override_font_sizes/font_size = 30
+text = "SALIR"
+
+[node name="ButtonPausa" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1242.0
+offset_top = 2.0
+offset_right = 1762.0
+offset_bottom = 522.0
+scale = Vector2(0.07, 0.07)
+theme_override_font_sizes/font_size = 30
+icon = ExtResource("2_ebbu5")
+flat = true
+
+[connection signal="pressed" from="ButtonContinuar" to="." method="_on_button_continuar_pressed"]
+[connection signal="pressed" from="ButtonSalir" to="." method="_on_button_salir_pressed"]
+[connection signal="pressed" from="ButtonPausa" to="." method="_on_button_pausa_pressed"]
